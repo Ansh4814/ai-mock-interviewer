@@ -11,13 +11,52 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             background-color: #0d0d1a;
+            font-family: Arial, sans-serif;
         }
 
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 14px;
+            padding: 6px 14px;
+            border-radius: 6px;
+        }
+
+        /* Sign In */
+        .nav-links a:first-child {
+            color: white;
+            border: 1px solid white;
+            background: transparent;
+        }
+
+        /* Get Started */
+        .nav-links a:last-child {
+            background-color: #7F77DD;
+            color: white;
+        }
+
+        /* HERO SECTION */
         .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            padding: 80px 20px 40px;
         }
 
         h1 {
@@ -43,19 +82,74 @@
         }
 
         button:hover {
-            background-color: #dcdcdc;
+            background-color: #6b63cc;
+        }
+
+        /* FEATURE CARDS */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            background-color: #161629;
+            padding: 25px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #b0b8c5;
+            font-size: 14px;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <h1>AI Mock Interviewer</h1>
-        <p>Practice interviews that remember your weaknesses</p>
-        <button>Get Started</button>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">InterviewAI</div>
+        <div class="nav-links">
+            <a href="#">Sign In</a>
+            <a href="#">Get Started</a>
+        </div>
     </div>
 
+    <!-- HERO -->
+    <div class="container">
+        <div>
+            <h1>AI Mock Interviewer</h1>
+            <p>Practice interviews that remember your weaknesses</p>
+            <button>Get Started</button>
+        </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="features">
+        <div class="card">
+            <h3>Smart Questions</h3>
+            <p>Questions tailored to your resume and target company</p>
+        </div>
+
+        <div class="card">
+            <h3>Voice Interviews</h3>
+            <p>Speak your answers naturally, just like a real interview</p>
+        </div>
+
+        <div class="card">
+            <h3>Track Progress</h3>
+            <p>See your weak areas and improve with every session</p>
+        </div>
+    </div>
 
 </body>
 </html>
